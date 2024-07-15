@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
+import { FormFieldType } from '../forms/PatientForm'
 import {
   Form,
   FormControl,
@@ -14,9 +15,10 @@ import { Control } from 'react-hook-form'
 
 interface CustomProps{
     control:Control<any>,
+    fieldtype:FormFieldType,
 }
 
-const CustomForms = ({control}:CustomProps) => {
+const CustomForms = ({control , fieldtype }:CustomProps) => {
   return (
     <FormField
     control={control}

@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button"
 import {Form} from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import CustomForms from "../ui/CustomForms"
+
+export enum FormFieldType{
+  INPUT= 'input',
+}
  
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -39,7 +43,13 @@ const formSchema = z.object({
 
       </section>
       <CustomForms 
+      fieldtype={FormFieldType.INPUT}
       control={form.control}
+      name="name"
+      label="Full-name"
+      placeholder="Jhon Doe"
+      iconSrc ="/assets/icons/user.svg"
+      iconAlt="user"
       />
       <Button type="submit">Submit</Button>
     </form>
