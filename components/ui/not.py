@@ -13,3 +13,4 @@ for k in range(j, n):
     nums[k] = 0
 
 print(nums)
+dcddssdsd
